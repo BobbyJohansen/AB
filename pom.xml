@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.noreaster</groupId>
 	<artifactId>ab</artifactId>
-	<version>4.0.4-SNAPSHOT</version>
+	<version>4.0.4</version>
 	<name>Program-AB</name>
     <packaging>jar</packaging>
 	<description>Program AB is the reference implementation of the AIML 2.0 draft specification. AIML is a widely adopted standard for creating chat bots and mobile virtual assistants like ALICE, Mitsuku, English Tutor, The Professor, S.U.P.E.R. and many more.</description>
@@ -19,7 +19,23 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+        <repository>
+            <id>central</id>
+            <url>http://nexus.noreaster.io:8081/nexus/content/groups/public/</url>
+        </repository>
 	</repositories>
+    <distributionManagement>
+        <repository>
+            <id>noreaster-deployment</id>
+            <name>Internal Releases</name>
+            <url>http://nexus.noreaster.io:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>noreaster-deployment</id>
+            <name>Internal Releases</name>
+            <url>http://nexus.noreaster.io:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 	<dependencies>
 <!-- 	    <dependency> -->
 <!-- 	    	<groupId>commons-codec</groupId> -->
