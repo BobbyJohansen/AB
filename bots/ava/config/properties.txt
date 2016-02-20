@@ -1,0 +1,7 @@
+url:http://www.alicebot.org
+name:Ava
+gender:female
+botmaster:Noreaster Labs
+organization:Noreaster Labs
+version:0.0.4
+
