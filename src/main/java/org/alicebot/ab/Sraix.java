@@ -18,16 +18,16 @@ package org.alicebot.ab;
         Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
         Boston, MA  02110-1301, USA.
 */
-import java.util.HashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.alicebot.ab.utils.CalendarUtils;
 import org.alicebot.ab.utils.NetworkUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class Sraix {
@@ -180,7 +180,9 @@ public class Sraix {
                         //for (int j = 0; j < arr.length(); j++) log.info(arr.getString(j));
                         imgRef = arr.getString(i);
                         if (imgRef.startsWith("//")) imgRef = "http:"+imgRef;
-                        imgRef = "<a href=\""+imgRef+"\"><img src=\""+imgRef+"\"/></a>";
+
+                        //problematic for chatbots
+                        //imgRef = "<a href=\""+imgRef+"\"><img src=\""+imgRef+"\"/></a>";
                         //log.info("IMAGE REF="+imgRef);
 
                     }
