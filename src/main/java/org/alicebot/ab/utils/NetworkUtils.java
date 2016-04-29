@@ -43,10 +43,31 @@ public class NetworkUtils {
     }
 
 
+	public static String responseContent(String url, String key) throws Exception {
+		HttpClient client = new DefaultHttpClient();
+		HttpGet request = new HttpGet();
+		request.setURI(new URI(url));
+		request.setHeader("X-Mashape-Key", key);
+		request.setHeader("Accept", "application/json");
+		InputStream is = client.execute(request).getEntity().getContent();
+		BufferedReader inb = new BufferedReader(new InputStreamReader(is));
+		StringBuilder sb = new StringBuilder("");
+		String line;
+		String NL = System.getProperty("line.separator");
+		while ((line = inb.readLine()) != null) {
+			sb.append(line).append(NL);
+		}
+		inb.close();
+		return sb.toString();
+	}
+
+
 	public static String responseContent(String url) throws Exception {
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet();
 		request.setURI(new URI(url));
+
+
 		InputStream is = client.execute(request).getEntity().getContent();
 		BufferedReader inb = new BufferedReader(new InputStreamReader(is));
 		StringBuilder sb = new StringBuilder("");
