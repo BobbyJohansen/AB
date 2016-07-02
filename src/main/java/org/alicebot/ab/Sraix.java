@@ -47,7 +47,7 @@ public class Sraix {
         }
         else response = sraixPannous(input, hint, chatSession);
         if (response.equals(MagicStrings.sraix_failed)) {
-          if (chatSession != null && defaultResponse == null) response = AIMLProcessor.respond(MagicStrings.sraix_failed, "nothing", "nothing", chatSession);
+          if (chatSession != null && defaultResponse == null) response = AIMLProcessor.respond(MagicStrings.sraix_failed +" " + input, "nothing", "nothing", chatSession);
           else if (defaultResponse != null) response = defaultResponse;
         }
 
