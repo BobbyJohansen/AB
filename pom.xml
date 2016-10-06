@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>io.noreaster</groupId>
+	<groupId>com.zeal</groupId>
 	<artifactId>ab</artifactId>
 	<version>4.0.4-SNAPSHOT</version>
 	<name>Program-AB</name>
@@ -21,19 +21,19 @@
 		</repository>
         <repository>
             <id>central</id>
-            <url>http://nexus.noreaster.io:8081/nexus/content/groups/public/</url>
+            <url>http://aiur.zeal.technology:8081/nexus/content/groups/public/</url>
         </repository>
 	</repositories>
     <distributionManagement>
         <repository>
-            <id>noreaster-deployment</id>
+            <id>aiur-deployment</id>
             <name>Internal Releases</name>
-            <url>http://nexus.noreaster.io:8081/nexus/content/repositories/releases/</url>
+            <url>http://aiur.zeal.technology:8081/nexus/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
-            <id>noreaster-deployment</id>
+            <id>aiur-deployment</id>
             <name>Internal Releases</name>
-            <url>http://nexus.noreaster.io:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://aiur.zeal.technology:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 	<dependencies>
